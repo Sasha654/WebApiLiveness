@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myrs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      api: loremapi
+  template:
+    metadata:
+      labels:
+        api: loremapi
+    spec:
+      containers:
+      - name: webapiliveness
+        image: sasha654/webapiliveness:2
+        livenessProbe:
+          httpGet:
+            path: /api/health
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 3
