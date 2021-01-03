@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		KuberManifests\kuber-rs.yaml = KuberManifests\kuber-rs.yaml
 		KuberManifests\kuber-svc.yaml = KuberManifests\kuber-svc.yaml
 		publish.ps1 = publish.ps1
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Global
